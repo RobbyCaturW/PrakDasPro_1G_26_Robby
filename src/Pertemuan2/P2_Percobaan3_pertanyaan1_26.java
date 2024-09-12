@@ -1,3 +1,5 @@
+package Pertemuan2;
+
 /**
  * P2_Percobaan3_pertanyaan1_26
  */
