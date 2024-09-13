@@ -1,6 +1,7 @@
 package Pertemuan3;
 
 import java.util.Scanner;
+
 public class Kafe26 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -18,8 +19,9 @@ public class Kafe26 {
         jmlRoti = input.nextInt();
         double totalHarga = (jmlKopi * hargaKopi) + (jmlTeh * hargaTeh) + (jmlRoti * hargaRoti);
         double nominalBayar = totalHarga - (diskon * totalHarga);
+        int nominalInt = (int) nominalBayar;
         System.out.println("Keanggotaan pelanggan " + keanggotaan);
         System.out.println("Item pembelian " + jmlKopi + " kopi, " + jmlTeh + " teh, " + jmlRoti + " roti");
-        System.out.println("Nominal Bayar Rp " + nominalBayar);
+        System.out.println("Nominal Bayar Rp " + nominalInt);
     }
 }
