@@ -30,6 +30,6 @@ public class P5Tugas3Daspro26 {
         hargaSetelahDiskon = (int) ((int) jumlahHarga - diskonHarga);
         System.out.println("Nama makanan: " + namaMakanan);
         System.out.println("Jumlah makanan: " + jumlahMakanan);
-        System.out.println("Harga setelah diskon: " + hargaSetelahDiskon);
+        System.out.println("Harga: " + hargaSetelahDiskon);
     }
 }
