@@ -9,10 +9,10 @@ public class PemilihanHariDenganIf26 {
         String dayType;
         System.out.print("Input day number: ");
         dayNumber = sc.nextInt();
-        if (dayNumber >= 1 && dayNumber <= 5) {
+        if (dayNumber >= 1 || dayNumber <= 5) {
             dayType = "weekday";
             System.out.println(dayNumber + " is a " + dayType); 
-       } else if (dayNumber >= 6 && dayNumber <= 7) {
+       } else if (dayNumber >= 6 || dayNumber <= 7) {
         dayType = "weekend";
         System.out.println(dayNumber + " is a " + dayType);
        } else if (dayNumber < 1 || dayNumber > 7) {
