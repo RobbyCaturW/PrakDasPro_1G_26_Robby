@@ -8,6 +8,7 @@ public class Tugas226 {
            System.out.print("Masukkan jumlah pesanan: ");
            int jmlPesanan = sc.nextInt();
            sc.nextLine();
+           String[] daftarMenu = {"Nasi Goreng", "Mie Goreng", "Bakmi", "Kentang Goreng", "Ice Tea", "Cappucino", "Orange Juice", "Matcha", "Vanila Latte"};
            String[] menu = new String[jmlPesanan];
            int[] harga = new int[jmlPesanan];
            int totalHarga = 0;
