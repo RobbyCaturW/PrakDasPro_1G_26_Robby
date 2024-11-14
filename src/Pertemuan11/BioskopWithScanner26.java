@@ -35,8 +35,12 @@ public class BioskopWithScanner26 {
                             sc.nextLine();
                         } while (kolom < 1 || kolom > 2);
                         
-                        penonton[baris-1][kolom-1] = nama;
-
+                        if (penonton[baris-1][kolom-1] == null) {
+                            penonton[baris-1][kolom-1] = nama;
+                        } else {
+                            System.out.println("Maaf, bangku tersebut sudah ditempati oleh orang lain! Silahkan cek di menu 2 untuk melihat bangku kosong");
+                            break;
+                        }
                         System.out.print("Input penonton lainnya? (y/n): ");
                         next = sc.nextLine();
                     } while (next.equalsIgnoreCase("y"));
