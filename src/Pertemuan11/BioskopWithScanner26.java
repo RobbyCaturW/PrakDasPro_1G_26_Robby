@@ -47,7 +47,7 @@ public class BioskopWithScanner26 {
                     break;
                 case 2:
                     for (String[] a : penonton) {
-                        System.out.println(String.join(", ", a));
+                        System.out.println(String.join(", ", a).replace("null", "***"));
                     }
                     break;
                 case 3:
