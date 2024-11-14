@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class BioskopWithScanner26 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int baris, kolom, select;
+        int baris = -1, kolom, select;
         String nama, next;
         String[][] penonton = new String[4][2];
         while (true) {
@@ -21,12 +21,22 @@ public class BioskopWithScanner26 {
                     do {
                         System.out.print("Masukkan nama: ");
                         nama = sc.nextLine();
-                        System.out.print("Masukkan baris: ");
-                        baris = sc.nextInt();
-                        System.out.print("Masukkan kolom: ");
-                        kolom = sc.nextInt();
-                        sc.nextLine();
+                        do {
+                            System.out.print("Masukkan baris: ");
+                            baris = sc.nextInt();
+                            if (baris < 1 || baris > 4) baris = -1;
+                            if (baris < 0) System.out.println("Baris tidak tersedia! Silahkan input ulang");
+                        } while (baris < 1 || baris > 4);
+                        do {
+                            System.out.print("Masukkan kolom: ");
+                            kolom = sc.nextInt();
+                            if (kolom < 1 || kolom > 2) kolom = -1;
+                            if (kolom < 0) System.out.println("Kolom tidak tersedia! Silahkan input ulang");
+                            sc.nextLine();
+                        } while (kolom < 1 || kolom > 2);
+                        
                         penonton[baris-1][kolom-1] = nama;
+
                         System.out.print("Input penonton lainnya? (y/n): ");
                         next = sc.nextLine();
                     } while (next.equalsIgnoreCase("y"));
