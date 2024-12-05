@@ -19,6 +19,6 @@ public class Percobaan6 {
         System.out.println("Luas persegi panjang adalah " + L);
 
         vol = p*l*t;
-        System.out.println("Volume balok adalah" + vol);
+        System.out.println("Volume balok adalah " + vol);
     }
 }
