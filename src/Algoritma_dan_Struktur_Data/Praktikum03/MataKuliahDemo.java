@@ -12,5 +12,11 @@ public class MataKuliahDemo {
             arrayOfMataKuliah[i] = new MataKuliah25("", "", 0, 0);
             arrayOfMataKuliah[i].tambahData(sc);
         }
+
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Data Mata Kuliah ke-" + (i+1));
+            arrayOfMataKuliah[i].cetakInfo();
+            System.out.println("-----------------------------");
+        }
     }
 }

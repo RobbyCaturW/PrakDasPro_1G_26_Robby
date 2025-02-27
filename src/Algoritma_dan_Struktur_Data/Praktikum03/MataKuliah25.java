@@ -14,7 +14,7 @@ public class MataKuliah25 {
         this.sks = sks;
         this.jumlahJam = jumlahJam;
     }
-
+    
     public void tambahData(Scanner sc) {
         System.out.print("Kode          : ");
         this.kode = sc.nextLine();
@@ -25,5 +25,12 @@ public class MataKuliah25 {
         System.out.print("Jumlah Jam    : ");
         this.jumlahJam = Integer.parseInt(sc.nextLine());
         System.out.println("------------------------------");
+    }
+
+    public void cetakInfo() {
+        System.out.println("Kode        : " + kode);
+        System.out.println("Nama        : " + nama);
+        System.out.println("SKS         : " + sks);
+        System.out.println("Jumlah Jam  : " + jumlahJam);
     }
 }
