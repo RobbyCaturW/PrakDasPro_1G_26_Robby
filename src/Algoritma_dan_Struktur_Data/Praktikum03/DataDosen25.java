@@ -1,78 +1,89 @@
 package Algoritma_dan_Struktur_Data.Praktikum03;
 
 public class DataDosen25 {
-    static void dataSemuaDosen(Dosen25[] arrayOfDosen) {
-        System.out.println("\nData Semua Dosen:");
+
+    public void dataSemuaDosen(Dosen25[] arrayOfDosen) {
+        int count = 1;
+        System.out.println("Data Semua Dosen\n");
         for (Dosen25 dosen : arrayOfDosen) {
-            System.out.println("Kode        : " + dosen.kode);
-            System.out.println("Nama        : " + dosen.nama);
-            System.out.println("Jenis Kelamin : " + (dosen.jenisKelamin ? "Pria" : "Wanita"));
-            System.out.println("Usia        : " + dosen.usia);
+            System.out.println("Data Dosen ke-" + count);
+            System.out.println("Kode            : " + dosen.kode);
+            System.out.println("Nama            : " + dosen.nama);
+            System.out.println("Jenis Kelamin   : " + (dosen.jenisKelamin == true ? "Pria" : "Wanita"));
+            System.out.println("Usia            : " + dosen.usia);
             System.out.println("------------------------------");
         }
     }
 
-    static void jumlahDosenPerJenisKelamin(Dosen25[] arrayOfDosen) {
-        int jumlahPria = 0, jumlahWanita = 0;
-        for (Dosen25 dosen : arrayOfDosen) {
-            if (dosen.jenisKelamin) {
-                jumlahPria++;
+    public void jumlahDosenPerJenisKelamin(Dosen25[] arrayOfDosen) {
+        int pria = 0;
+        int wanita = 0;
+        for (Dosen25 dsn : arrayOfDosen) {
+            if (dsn.jenisKelamin == true) {
+                pria ++;
             } else {
-                jumlahWanita++;
+                wanita++;
             }
         }
-        System.out.println("\nJumlah Dosen:");
-        System.out.println("Pria   : " + jumlahPria);
-        System.out.println("Wanita : " + jumlahWanita);
+        System.out.println("\nJumlah Dosen dengan jenis kelamin Pria      : " + pria);
+        System.out.println("Jumlah Dosen dengan jenis kelamin Wanita    : " + wanita);
+        System.out.println("------------------------------");
     }
-    
-    static void rerataUsiaDosenPerJenisKelamin(Dosen25[] arrayOfDosen) {
-        int totalUsiaPria = 0, totalUsiaWanita = 0;
-        int countPria = 0, countWanita = 0;
 
-        for (Dosen25 dosen : arrayOfDosen) {
-            if (dosen.jenisKelamin) {
-                totalUsiaPria += dosen.usia;
+    public void rerataUsiaDosenPerJenisKelamin(Dosen25[] arrayOfDosen) {
+        int jmlUsiaPria = 0;
+        int countPria = 0;
+        int jmlUsiaWanita = 0;
+        int countWanita = 0;
+        for (Dosen25 dsn : arrayOfDosen) {
+            if(dsn.jenisKelamin == true) {
+                jmlUsiaPria += dsn.usia;
                 countPria++;
-            } else {
-                totalUsiaWanita += dosen.usia;
+            }
+            else {
+                jmlUsiaWanita += dsn.usia;
                 countWanita++;
             }
         }
-
-        System.out.println("\nRata-rata Usia Dosen:");
-        System.out.println("Pria   : " + (countPria == 0 ? "Tidak ada data" : (totalUsiaPria / (double) countPria)));
-        System.out.println("Wanita : " + (countWanita == 0 ? "Tidak ada data" : (totalUsiaWanita / (double) countWanita)));
-    }
-    static void infoDosenPalingTua(Dosen25[] arrayOfDosen) {
-        Dosen25 tertua = arrayOfDosen[0];
-
-        for (Dosen25 dosen : arrayOfDosen) {
-            if (dosen.usia > tertua.usia) {
-                tertua = dosen;
-            }
-        }
-
-        System.out.println("\nDosen Paling Tua:");
-        System.out.println("Kode        : " + tertua.kode);
-        System.out.println("Nama        : " + tertua.nama);
-        System.out.println("Jenis Kelamin : " + (tertua.jenisKelamin ? "Pria" : "Wanita"));
-        System.out.println("Usia        : " + tertua.usia);
+        System.out.println("\nRata-rata usia dosen Pria   : " + ((double) ((double) jmlUsiaPria / countPria)));
+        System.out.println("------------------------------");
+        System.out.println("Rata-rata usia dosen Wanita : " + ((double) ((double) jmlUsiaWanita / countWanita)));
+        System.out.println("------------------------------");
     }
 
-    static void infoDosenPalingMuda(Dosen25[] arrayOfDosen) {
-        Dosen25 termuda = arrayOfDosen[0];
-
-        for (Dosen25 dosen : arrayOfDosen) {
-            if (dosen.usia < termuda.usia) {
-                termuda = dosen;
+    public void infoDosenPalingTua(Dosen25[] arrayOfDosen) {
+        int tertua = 0;
+        for (Dosen25 dsn : arrayOfDosen) {
+            int usia = dsn.usia;
+            if (usia > tertua) tertua = usia;
+        }
+        System.out.println("\nDosen dengan Usia Tertua ");
+        for (Dosen25 dsn : arrayOfDosen) {
+            if (dsn.usia == tertua) {
+                System.out.println("Kode            : " + dsn.kode);
+                System.out.println("Nama            : " + dsn.nama);
+                System.out.println("Jenis Kelamin   : " + (dsn.jenisKelamin == true ? "Pria" : "Wanita"));
+                System.out.println("Usia            : " + dsn.usia);
+                System.out.println("------------------------------");
             }
         }
+    }
 
-        System.out.println("\nDosen Paling Muda:");
-        System.out.println("Kode        : " + termuda.kode);
-        System.out.println("Nama        : " + termuda.nama);
-        System.out.println("Jenis Kelamin : " + (termuda.jenisKelamin ? "Pria" : "Wanita"));
-        System.out.println("Usia        : " + termuda.usia);
+    public void infoDosenPalingMuda(Dosen25[] arrayPfDosen) {
+        int termuda = 1000;
+        for (Dosen25 dsn : arrayPfDosen) {
+            if (dsn.usia < termuda) termuda = dsn.usia;
+        }
+
+        System.out.println("\nDosen dengan Usia Termuda");
+        for (Dosen25 dsn : arrayPfDosen) {
+            if (dsn.usia == termuda) {
+                System.out.println("Kode            : " + dsn.kode);
+                System.out.println("Nama            : " + dsn.nama);
+                System.out.println("Jenis Kelamin   : " + (dsn.jenisKelamin == true ? "Pria" : "Wanita"));
+                System.out.println("Usia            : " + dsn.usia);
+                System.out.println("------------------------------");
+            }
+        }
     }
 }

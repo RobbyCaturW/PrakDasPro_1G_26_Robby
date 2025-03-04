@@ -32,17 +32,11 @@ public class DosenDemo25 {
             System.out.println("------------------------------");
             arrayOfDosen[i] = new Dosen25(kode, nama, jenisKelamin, usia);
         }
-        
-        int count = 1;
-        for (Dosen25 d : arrayOfDosen) {
-            System.out.println("Data Dosen ke-" + count);
-            System.out.println("Kode            : " + d.kode);
-            System.out.println("Nama            : " + d.nama);
-            System.out.println("Jenis Kelamin   : " + (d.jenisKelamin == true ? "Pria" : "Wanita"));
-            System.out.println("Usia            : " + d.usia);
-            System.out.println("------------------------------");
-            count++;
-        }
-        
+        DataDosen25 dsn = new DataDosen25();
+        dsn.dataSemuaDosen(arrayOfDosen);
+        dsn.jumlahDosenPerJenisKelamin(arrayOfDosen);
+        dsn.rerataUsiaDosenPerJenisKelamin(arrayOfDosen);
+        dsn.infoDosenPalingTua(arrayOfDosen);
+        dsn.infoDosenPalingMuda(arrayOfDosen);
     }
 }
