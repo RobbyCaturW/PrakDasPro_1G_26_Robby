@@ -13,9 +13,7 @@ public class DosenMain25 {
             System.out.println("2. Tampilkan data");
             System.out.println("3. Sorting ASC menggunakan bubble sort");
             System.out.println("4. Sorting DSC menggunakan selection sort");
-            System.out.println("5. Cari dosen berdasarkan nama (Sequential Search)");
-            System.out.println("6. Cari dosen berdasarkan usia (binary search)");
-            System.out.println("7. Keluar");
+            System.out.println("5. Keluar");
             System.out.print("Pilih menu: ");
             int menu = sc.nextInt();
             sc.nextLine();
@@ -57,17 +55,6 @@ public class DosenMain25 {
                     data.tampil();
                     break;
                 case 5:
-                    System.out.print("Input nama dosen yang ingin dicari: ");
-                    String nama = sc.nextLine();
-                    data.PencarianDataSequential25(nama);
-                    break;
-                case 6:
-                    System.out.print("Input usia dosen yang ingin dicari: ");
-                    int usia = sc.nextInt();
-                    sc.nextLine();
-                    data.PencarianDataBinary25(usia);
-                    break;
-                case 7:
                     System.out.println("Selesai!");
                     isRunning = false;
                     break;
