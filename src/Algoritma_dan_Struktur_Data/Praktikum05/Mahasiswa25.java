@@ -19,6 +19,10 @@ public class Mahasiswa25 {
         kelas = kls;
     }
 
+    int lengthArr(int l) {
+        return l;
+    }
+
     void tampilInformasi() {
         System.out.println("Nama: " + nama);
         System.out.println("NIM: " + nim);
