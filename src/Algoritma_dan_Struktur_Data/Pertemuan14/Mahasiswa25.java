@@ -1,4 +1,4 @@
-package Pertemuan14;
+package Algoritma_dan_Struktur_Data.Pertemuan14;
 
 public class Mahasiswa25 {
     String nim, nama, kelas;
