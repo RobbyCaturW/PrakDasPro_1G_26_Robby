@@ -1,4 +1,4 @@
-package Pertemuan14;
+package Algoritma_dan_Struktur_Data.Pertemuan14;
 
 public class Node25 {
     Mahasiswa25 mahasiswa;
