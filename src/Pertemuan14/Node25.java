@@ -11,6 +11,4 @@ public class Node25 {
         this.mahasiswa = mahasiswa;
         left = right = null;
     }
-
-    
 }
